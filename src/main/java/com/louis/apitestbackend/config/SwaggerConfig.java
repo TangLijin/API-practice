@@ -24,7 +24,6 @@ public class SwaggerConfig {
                 .produces(Collections.singleton("application/json;charset=UTF-8"))
                 .apiInfo(getApiInfo())
                 .select()
-
                 //只有标记了@ApiOperation的方法才会暴露出给swagger
                 .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
                 .paths(PathSelectors.any()).build();
